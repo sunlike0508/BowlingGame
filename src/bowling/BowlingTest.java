@@ -31,11 +31,23 @@ class BowlingTest {
 	}
 	
 	@Test
-	@DisplayName("roll 메소드 간단히 구현. 5점씩 넣을 때 총 점수는 100점")
+	@DisplayName("roll 메소드 간단히 구현. 모든 기회에 5점. 각 프레임 10점씩 넣을 때 총 점수는 100점")
 	void test_should_return_100_when_all_of_pins_are_5_for_simple_score_function() {
 		gutterGame(0, 5);
 		
 		assertEquals(100, bowling.score());
+	}
+	
+	@Test
+	@DisplayName("4번만 5점씩 넣고 그 이후는 거터 게임 진행. 총 점수는 20점")
+	void test_should_return_20_when_input_is_5_until_fourth() {
+		bowling.roll(5);
+		bowling.roll(5);
+		bowling.roll(5);
+		bowling.roll(5);
+		gutterGame(4, 0);
+		
+		assertEquals(20, bowling.score());
 	}
 	
 	public void gutterGame(int count, int pins) {
