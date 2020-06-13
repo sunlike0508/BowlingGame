@@ -25,7 +25,7 @@ class BowlingTest {
 	@Test
 	@DisplayName("Gutter game 테스트 코드 생성")
 	void test_should_return_0_when_game_is_gutter() {
-		gutterGame(20, 0);
+		gutterGame(0, 0);
 		
 		assertEquals(0, bowling.score());
 	}
@@ -33,13 +33,13 @@ class BowlingTest {
 	@Test
 	@DisplayName("roll 메소드 간단히 구현. 5점씩 넣을 때 총 점수는 100점")
 	void test_should_return_100_when_all_of_pins_are_5_for_simple_score_function() {
-		gutterGame(20, 5);
+		gutterGame(0, 5);
 		
 		assertEquals(100, bowling.score());
 	}
 	
 	public void gutterGame(int count, int pins) {
-		for(int i = 0; i < count; i++) {
+		for(int i = count; i < 20; i++) {
 			bowling.roll(pins);
 		}
 	}
