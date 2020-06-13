@@ -23,12 +23,6 @@ class BowlingTest {
 	}
 	
 	@Test
-	@DisplayName("Score 메소드 생성")
-	void test_can_make_score_function() {
-		assertEquals(0, bowling.score());
-	}
-	
-	@Test
 	@DisplayName("Gutter game 테스트 코드 생성")
 	void test_should_return_0_when_game_is_gutter() {
 		for(int i = 0; i < 20; i++) {
