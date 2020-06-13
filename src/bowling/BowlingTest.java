@@ -12,5 +12,12 @@ class BowlingTest {
 	void test_can_make_game_class() {
 		Bowling bowling = new Bowling();
 	}
+	
+	@Test
+	@DisplayName("roll 메소드 생성 가능")
+	void test_can_make_roll_function() {
+		Bowling bowling = new Bowling();
+		bowling.roll(0);
+	}
 
 }
