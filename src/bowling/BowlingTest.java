@@ -31,4 +31,14 @@ class BowlingTest {
 		
 		assertEquals(0, bowling.score());
 	}
+	
+	@Test
+	@DisplayName("roll 메소드 간단히 구현. 5점씩 넣을 때 총 점수는 100점")
+	void test_should_return_100_when_all_of_pins_are_5_for_simple_score_function() {
+		for(int i = 0; i < 20; i++) {
+			bowling.roll(5);
+		}
+		
+		assertEquals(100, bowling.score());
+	}
 }
