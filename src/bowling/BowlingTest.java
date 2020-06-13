@@ -1,5 +1,7 @@
 package bowling;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -15,10 +17,16 @@ class BowlingTest {
 	}
 	
 	@Test
-	@DisplayName("roll 메소드 생성 가능")
+	@DisplayName("roll 메소드 생성")
 	void test_can_make_roll_function() {
-		bowling = new Bowling();
 		bowling.roll(0);
 	}
+	
+	@Test
+	@DisplayName("Score 메소드 생성")
+	void test_can_make_score_function() {
+		assertEquals(0, bowling.score());
+	}
+	
 
 }
