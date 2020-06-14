@@ -7,13 +7,28 @@ public class Bowling {
 	int first = 0;
 
 	public void roll(int pins) {
-		if(first == 0) {
-			score[frame][0] = pins;
-			first++;
+
+		if(frame == 9) {
+			if(first == 0) {
+				score[frame][0] = pins;
+				first++;
+			} else if(first == 1){
+				score[frame][1] = pins;
+				first = 0;
+			} else {
+				score[frame][2] = pins;
+				first = 0;
+				frame++;
+			}
 		} else {
-			score[frame][1] = pins;
-			first = 0;
-			frame++;
+			if(first == 0) {
+				score[frame][0] = pins;
+				first++;
+			} else {
+				score[frame][1] = pins;
+				first = 0;
+				frame++;
+			}
 		}
 	}
 

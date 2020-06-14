@@ -51,7 +51,7 @@ class BowlingTest {
 	}
 	
 	public void gutterGame(int count, int pins) {
-		for(int i = count; i < 20; i++) {
+		for(int i = count; i < 21; i++) {
 			bowling.roll(pins);
 		}
 	}
