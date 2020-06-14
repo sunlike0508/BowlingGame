@@ -14,7 +14,7 @@ public class Bowling {
 				first++;
 			} else if(first == 1){
 				score[frame][1] = pins;
-				first = 0;
+				first++;
 			} else {
 				score[frame][2] = pins;
 				first = 0;
