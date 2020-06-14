@@ -39,6 +39,7 @@ public class Bowling {
 		for(int i = 0; i < 10; i++) {
 			scoreSum += score[i][0];
 			scoreSum += score[i][1];
+			scoreSum += score[i][2];
 		}
 		
 		return scoreSum;
