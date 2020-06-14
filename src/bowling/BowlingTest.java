@@ -31,11 +31,11 @@ class BowlingTest {
 	}
 	
 	@Test
-	@DisplayName("roll 메소드 간단히 구현. 모든 기회에 5점. 각 프레임 10점씩 넣을 때 총 점수는 100점")
+	@DisplayName("roll 메소드 간단히 구현. 모든 기회에 5점. 각 프레임 10점씩 넣을 때 총 점수는 105점")
 	void test_should_return_100_when_all_of_pins_are_5_for_simple_score_function() {
 		gutterGame(0, 5);
 		
-		assertEquals(100, bowling.score());
+		assertEquals(105, bowling.score());
 	}
 	
 	@Test
