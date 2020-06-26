@@ -17,12 +17,6 @@ class BowlingTest {
 	}
 	
 	@Test
-	@DisplayName("roll 메소드 생성")
-	void test_can_make_roll_function() {
-		bowling.roll(0);
-	}
-	
-	@Test
 	@DisplayName("Gutter game 테스트 코드 생성")
 	void test_should_return_0_when_game_is_gutter() {
 		gutterGame(0, 0);
